@@ -1,7 +1,6 @@
 pipeline {
-    agent any
-    tools {
-        python 'Python3' 
+    agent {
+        docker { image 'python:3.9-slim' }
     }
     stages {
         stage('Build') { 
