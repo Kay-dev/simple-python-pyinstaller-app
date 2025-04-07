@@ -1,7 +1,8 @@
 pipeline {
-    agent any 
-    tools {
-        python 'Python-3.9' 
+    agent {
+        docker {
+            image 'python:3.9'
+        }
     }
     stages {
         stage('Build') { 
